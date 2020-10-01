@@ -57,21 +57,21 @@ while True:
         # Recognize the face belongs to which ID
         Id, confidence = recognizer.predict(gray[y:y+h,x:x+w])
 
-        # Check the ID if exist 
+        # Check if the ID exist 
         if(Id == 2):
-            Id = "Jamshed {0:.2f}%".format(round(100 - confidence, 2))
+            Id = "Jamshed {0:.2f}%".format(round(confidence, 2))
         elif(Id == 1):
-            Id = "Jawed {0:.2f}%".format(round(100 - confidence, 2))
+            Id = "Jawed {0:.2f}%".format(round(confidence, 2))
         elif(Id == 3):
-            Id = "Saifuddin {0:.2f}%".format(round(100 - confidence, 2))
+            Id = "Saifuddin {0:.2f}%".format(round(confidence, 2))
         elif(Id == 4):
-            Id = "Samiurrahman {0:.2f}%".format(round(100 - confidence, 2))
+            Id = "Samiurrahman {0:.2f}%".format(round(confidence, 2))
         elif(Id == 5):
-            Id = "Azhar {0:.2f}%".format(round(100 - confidence, 2))
+            Id = "Azhar {0:.2f}%".format(round(confidence, 2))
         elif(Id == 6):
-            Id = "Zulfa {0:.2f}%".format(round(100 - confidence, 2))
+            Id = "Zulfa {0:.2f}%".format(round(confidence, 2))
         elif(Id == 7):
-            Id = "Zaid {0:.2f}%".format(round(100 - confidence, 2))
+            Id = "Zaid {0:.2f}%".format(round(confidence, 2))
 
         # Put text describe who is in the picture
         cv2.rectangle(im, (x-22,y-90), (x+w+22, y-22), (0,255,0), -1)
